@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Cafe Finder</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#6a11cb,#2575fc);
+color:white;
+text-align:center;
+margin:0;
+}
+
+h1{
+margin-top:30px;
+}
+
+table{
+margin:auto;
+margin-top:30px;
+border-collapse:collapse;
+width:80%;
+background:rgba(0,0,0,0.4);
+}
+
+th,td{
+padding:12px;
+border:1px solid white;
+}
+
+button{
+margin-top:20px;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#ffcc00;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:white;
+}
+
+a{
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>☕ Cafe & Wifi List</h1>
+
+<a href="/add">
+<button>Add Cafe</button>
+</a>
+
+<table>
+
+<tr>
+<th>Name</th>
+<th>Location</th>
+<th>Seats</th>
+<th>Wifi</th>
+<th>Sockets</th>
+<th>Coffee Price</th>
+</tr>
+
+{% for cafe in cafes %}
+
+<tr>
+<td>{{ cafe.name }}</td>
+<td>{{ cafe.location }}</td>
+<td>{{ cafe.seats }}</td>
+<td>{{ cafe.has_wifi }}</td>
+<td>{{ cafe.has_sockets }}</td>
+<td>{{ cafe.coffee_price }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

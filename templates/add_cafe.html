@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Add Cafe</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#222;
+color:white;
+text-align:center;
+}
+
+h1{
+margin-top:40px;
+}
+
+form{
+margin-top:30px;
+}
+
+input{
+display:block;
+margin:10px auto;
+padding:10px;
+width:250px;
+border-radius:5px;
+border:none;
+}
+
+button{
+padding:10px 20px;
+background:#ffcc00;
+border:none;
+border-radius:20px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+background:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Add New Cafe</h1>
+
+<form method="POST">
+
+<input name="name" placeholder="Cafe Name" required>
+
+<input name="map_url" placeholder="Google Map URL" required>
+
+<input name="img_url" placeholder="Image URL" required>
+
+<input name="location" placeholder="Location" required>
+
+<input name="seats" placeholder="Seats" required>
+
+<input name="coffee_price" placeholder="Coffee Price">
+
+<button type="submit">Add Cafe</button>
+
+</form>
+
+</body>
+</html>
